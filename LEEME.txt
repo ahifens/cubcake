@@ -1,0 +1,11 @@
+FOOTER NUEVO DE CUBCAKE'S
+
+1. Abre index.html en Visual Studio Code.
+2. Busca <footer class="site-footer"> y su correspondiente </footer>.
+3. Sustituye ese bloque completo por el contenido de footer.html.
+4. Abre styles.css y PEGA todo el contenido de footer.css al FINAL del archivo.
+5. Guarda los cambios y súbelos a GitHub. En Render se desplegarán cuando detecte el commit si tienes Auto-Deploy activado.
+
+- NO hace falta modificar server.js ni package.json.
+- Los enlaces Instagram proceden del footer que ya estaba publicado: @edgar_dual, @ahifens y @cubcake_s.
+- Comprueba que los autores y el propietario autorizan mostrar los créditos públicos.
