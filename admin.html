@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff6f1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests">
+    <title>Administración — Cubcake's</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <main class="admin-shell">
+      <a class="admin-brand" href="/" aria-label="Volver a Cubcake's">
+        <img src="/assets/logo.png" alt="" width="50" height="50">
+        <span>Cubcake's</span>
+      </a>
+
+      <section class="admin-card" aria-labelledby="admin-title">
+        <p class="admin-eyebrow">Panel privado</p>
+        <h1 id="admin-title">Gestiona la galería</h1>
+        <p class="admin-intro">Publica las fotos de tus tartas para que aparezcan en la web.</p>
+
+        <form class="login-form" id="login-form">
+          <label for="admin-password">Contraseña de administrador</label>
+          <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+          <button class="admin-button" type="submit">Entrar al panel</button>
+        </form>
+
+        <div class="dashboard" id="dashboard" hidden>
+          <form class="upload-form" id="upload-form">
+            <label class="file-label" for="image-file">Elige una imagen JPG, PNG o WebP</label>
+            <input id="image-file" name="image" type="file" accept="image/jpeg,image/png,image/webp" required>
+            <p class="upload-hint">Máximo 8 MB por imagen. Se optimiza automáticamente al publicarla.</p>
+            <button class="admin-button" type="submit">Publicar imagen</button>
+          </form>
+
+          <div class="dashboard-heading">
+            <h2>Imágenes publicadas</h2>
+            <button class="logout-button" id="logout-button" type="button">Cerrar sesión</button>
+          </div>
+          <div class="admin-gallery" id="admin-gallery"></div>
+        </div>
+
+        <p class="admin-message" id="admin-message" role="status" aria-live="polite"></p>
+        <a class="back-link" href="/">← Volver a la web</a>
+      </section>
+    </main>
+  </body>
+</html>
