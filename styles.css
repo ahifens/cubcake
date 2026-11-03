@@ -1219,3 +1219,125 @@ p {
     transition-duration: .01ms !important;
   }
 }
+
+.site-footer.credits-footer {
+  display: block;
+  min-height: 0;
+  padding: 44px 24px 24px;
+  background: var(--cream-dark);
+  border-top: 1px solid rgb(85 37 31 / 12%);
+}
+
+.credits-footer__inner {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.credits-footer__top,
+.credits-footer__bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.credits-footer .footer-brand {
+  display: inline-block;
+  color: var(--wine);
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.credits-footer .footer-brand span {
+  color: var(--terracotta);
+}
+
+.credits-footer .credits-footer__brand p {
+  margin: 8px 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.credits-footer .footer-location {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: left;
+}
+
+.credits-footer .footer-instagram {
+  margin-top: 4px;
+}
+
+.credits-footer__bottom {
+  align-items: flex-end;
+  margin-top: 32px;
+  padding-top: 22px;
+  border-top: 1px solid rgb(85 37 31 / 16%);
+}
+
+.credits-footer__team {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 38px;
+}
+
+.credits-footer__credit {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.credits-footer .credits-footer__role {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.credits-footer .credits-footer__credit a {
+  width: fit-content;
+  color: var(--terracotta-dark);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.credits-footer .credits-footer__credit a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.credits-footer .credits-footer__copyright {
+  max-width: 240px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .credits-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .credits-footer .credits-footer__copyright {
+    max-width: none;
+    text-align: left;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-footer.credits-footer {
+    padding: 36px 20px 24px;
+  }
+
+  .credits-footer__team {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
