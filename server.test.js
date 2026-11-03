@@ -83,6 +83,20 @@ test('requires a strong admin password before starting', () => {
   );
 });
 
+test('serves the current footer stylesheet without a stale browser cache', async () => {
+  const directory = await fs.promises.mkdtemp(path.join(os.tmpdir(), 'cubcake-images-'));
+  temporaryDirectories.add(directory);
+  const { url } = await startServer(directory);
+
+  const htmlResponse = await fetch(url);
+  const html = await htmlResponse.text();
+  assert.match(html, /styles\.css\?v=20261103-footer/);
+
+  const cssResponse = await fetch(`${url}/styles.css?v=20261103-footer`);
+  assert.equal(cssResponse.headers.get('cache-control'), 'no-cache');
+  assert.match(await cssResponse.text(), /\.site-footer\.credits-footer/);
+});
+
 test('protects publishing, persists normalized images, and allows deletion', async () => {
   const directory = await fs.promises.mkdtemp(path.join(os.tmpdir(), 'cubcake-images-'));
   temporaryDirectories.add(directory);

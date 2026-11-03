@@ -342,7 +342,7 @@ function createApp({
 
     const [relativePath, contentType] = file;
     res.set({
-      'Cache-Control': relativePath.endsWith('.html') ? 'no-cache' : 'public, max-age=3600',
+      'Cache-Control': /\.(html|css|js)$/.test(relativePath) ? 'no-cache' : 'public, max-age=3600',
       'Content-Type': contentType,
     });
     res.sendFile(path.join(ROOT, relativePath), (error) => {
