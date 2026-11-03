@@ -678,6 +678,36 @@ p {
   text-align: right;
 }
 
+.footer-instagram {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgb(85 37 31 / 18%);
+  border-radius: 50%;
+  color: var(--terracotta-dark);
+  transition: background .2s ease, color .2s ease;
+}
+
+.footer-instagram:hover {
+  background: var(--terracotta);
+  color: var(--white);
+}
+
+.footer-instagram svg {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+}
+
+.footer-instagram .instagram-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
 @media (max-width: 920px) {
   .site-header,
   .hero {
@@ -1022,6 +1052,10 @@ p {
   }
 
   .site-footer .footer-designer {
+    order: 2;
+  }
+
+  .footer-instagram {
     order: 2;
   }
 
