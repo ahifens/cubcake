@@ -659,6 +659,16 @@ p {
   font-size: 10px;
 }
 
+.footer-designer a {
+  color: var(--terracotta-dark);
+  font-weight: 700;
+}
+
+.footer-designer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .site-footer p span {
   margin-left: 4px;
   color: var(--terracotta);
@@ -1009,6 +1019,10 @@ p {
   .site-footer p {
     order: 1;
     width: 100%;
+  }
+
+  .site-footer .footer-designer {
+    order: 2;
   }
 
   .footer-location {
